@@ -1,0 +1,21 @@
+{
+  "version": "0.1.0",
+  "name": "mock-trading-api",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriz/mock-trading-api.git"
+  },
+  "scripts": {
+    "test": "npx tape **/*.test.js",
+    "gac": "git add . && git commit"
+  },
+  "keywords": [],
+  "author": "Dmitri Zaitsev <dmitri14@gmail.com> (https://github.com/dmitriz)",
+  "license": "MIT",
+  "description": "Pure functions mocking trading APIs for testing",
+  "bugs": {
+    "url": "https://github.com/dmitriz/mock-trading-api/issues"
+  },
+  "homepage": "https://github.com/dmitriz/mock-trading-api#readme"
+}
