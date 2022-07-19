@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "npx tape **/*.test.js",
-    "gac": "git add . && git commit"
+    "gac": "git add . && git commit",
+    "sync": "npm run gac; git pull && git push"    
   },
   "keywords": [],
   "author": "Dmitri Zaitsev <dmitri14@gmail.com> (https://github.com/dmitriz)",
