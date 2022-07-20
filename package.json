@@ -23,8 +23,8 @@
     "cpsfy": "^3.3.0"
   },
   "devDependencies": {
-    "axios": "^0.27.2",
-    "tape": "^5.5.3",
-    "test-curried": "^1.0.1"
+    "axios": "0.27.2",
+    "tape": "5.5.3",
+    "test-curried": "1.0.1"
   }
 }
