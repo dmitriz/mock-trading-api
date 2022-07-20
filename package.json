@@ -9,7 +9,7 @@
   "scripts": {
     "test": "npx tape **/*.test.js",
     "gac": "git add . && git commit",
-    "sync": "npm run gac; git pull && git push"    
+    "sync": "npm run gac; git pull && git push"
   },
   "keywords": [],
   "author": "Dmitri Zaitsev <dmitri14@gmail.com> (https://github.com/dmitriz)",
@@ -18,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/dmitriz/mock-trading-api/issues"
   },
-  "homepage": "https://github.com/dmitriz/mock-trading-api#readme"
+  "homepage": "https://github.com/dmitriz/mock-trading-api#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cpsfy": "^3.3.0"
+  },
+  "devDependencies": {
+    "tape": "^5.5.3",
+    "test-curried": "^1.0.1"
+  }
 }
