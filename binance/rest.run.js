@@ -16,8 +16,8 @@ const run_mult = ep => BINANCE_REST_URLs.map(url =>
 	)(show, show)
 )
 
-// run_mult('/api/v1/ping')
-// run('/api/v1/ping')
+// run_mult('/api/v3/ping')
+// run('/api/v3/ping')
 // run('/api/v3/time')
 
 // run('/api/v3/exchangeInfo')
@@ -74,3 +74,5 @@ const run_mult = ep => BINANCE_REST_URLs.map(url =>
 // run_query('/api/v3/ticker', {symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})
 // run_query('/api/v3/ticker', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})	// illegal
 
+
+// run_query('/api/v3/historicalTrades', {symbol: "ETHBTC"})	// illegal

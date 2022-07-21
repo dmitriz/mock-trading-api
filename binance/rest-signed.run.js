@@ -9,4 +9,3 @@ const run_binance_signed = (endpt, query) =>
 	})(show,show)
 
 run_binance_signed('/api/v3/myTrades', {symbol: 'ONEBUSD', startTime: 1641654559415})
-
