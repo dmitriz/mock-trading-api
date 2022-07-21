@@ -44,9 +44,9 @@ const endpts_map = {
 ,	'/api/v3/historicalTrades' : require('./endpoint-hist-trades')
 }
 
-const mock_client = ({ url, query, headers, method }) => {
+const mock_client = ({ url, query, ...rest }) => {
 	const endpt = rm_begin(BINANCE_REST_URLs)(url)
-	return of(endpts_map[endpt]({query}))
+	return of(endpts_map[endpt]({query, ...rest}))
 }
 
 module.exports = mock_client
