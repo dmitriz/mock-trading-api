@@ -29,6 +29,18 @@ const endpts_map = {
 
 	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#current-average-price
 ,	'/api/v3/avgPrice' : require('./endpoint-market').avgPrice
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#24hr-ticker-price-change-statistics
+,	'/api/v3/ticker/24hr' : require('./endpoint-tickers').ticker24
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#symbol-price-ticker
+,	'/api/v3/ticker/price' : require('./endpoint-tickers').price
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#symbol-order-book-ticker
+,	'/api/v3/ticker/bookTicker' : require('./endpoint-tickers').book
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#rolling-window-price-change-statistics
+,	'/api/v3/ticker' : require('./endpoint-tickers').ticker
 }
 
 const mock_client = ({ url, query, headers, method }) => {

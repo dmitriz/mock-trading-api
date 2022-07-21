@@ -57,6 +57,24 @@ const run_mult = ep => base_urls.map(url =>
 // run_query('/api/v3/ticker/24hr')
 // run_query('/api/v3/ticker/24hr', {symbol: "ETHBTC"})
 // run_query('/api/v3/ticker/24hr', {symbols: ["BTCUSDT","BNBBTC"]})
+// run_query('/api/v3/ticker/24hr', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"]})	// illegal
+
+// run_query('/api/v3/ticker/price')
+// run_query('/api/v3/ticker/price', {symbol: "ETHBTC"})
+// run_query('/api/v3/ticker/price', {symbols: ["BTCUSDT","BNBBTC"]})
+// run_query('/api/v3/ticker/price', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"]})	// illegal
+
+// run_query('/api/v3/ticker/bookTicker')
+// run_query('/api/v3/ticker/bookTicker', {symbol: "ETHBTC"})
+// run_query('/api/v3/ticker/bookTicker', {symbols: ["BTCUSDT","BNBBTC"]})
+// run_query('/api/v3/ticker/bookTicker', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"]})	// illegal
+
+run_query('/api/v3/ticker')	// illegal
+// run_query('/api/v3/ticker', {symbol: "ETHBTC"})
+// run_query('/api/v3/ticker', {symbol: "ETHBTC", windowSize: '1m'})
+// run_query('/api/v3/ticker', {symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})
+// run_query('/api/v3/ticker', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})	// illegal
+
 
 
 // run_query('/api/v3/historicalTrades', {symbol: "ETHBTC"})	// illegal
