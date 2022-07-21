@@ -1,16 +1,15 @@
 const req = require('../req')
 
 const { pipeline, map } = require('cpsfy')
-const { base_urls } = require('./conf')
+const { BINANCE_REST_URLs } = require('./conf')
 const show = console.log
 
 // use the 1st base url
-const run = ep => req({ url: base_urls[0] + ep })(show, show)
+const run = ep => req({ url: BINANCE_REST_URLs[0] + ep })(show, show)
+const run_query = (ep, query) => req({ url: BINANCE_REST_URLs[0] + ep, query })(show, show)
 
-const run_query = (ep, query) => req({ url: base_urls[0] + ep, query })(show, show)
-
-// iterate over all base_urls
-const run_mult = ep => base_urls.map(url =>
+// iterate over all BINANCE_REST_URLs
+const run_mult = ep => BINANCE_REST_URLs.map(url =>
 	pipeline({ url: url + ep })(
 		req,
 		// map(res => res.data)
@@ -69,14 +68,9 @@ const run_mult = ep => base_urls.map(url =>
 // run_query('/api/v3/ticker/bookTicker', {symbols: ["BTCUSDT","BNBBTC"]})
 // run_query('/api/v3/ticker/bookTicker', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"]})	// illegal
 
-run_query('/api/v3/ticker')	// illegal
+// run_query('/api/v3/ticker')	// illegal
 // run_query('/api/v3/ticker', {symbol: "ETHBTC"})
 // run_query('/api/v3/ticker', {symbol: "ETHBTC", windowSize: '1m'})
 // run_query('/api/v3/ticker', {symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})
 // run_query('/api/v3/ticker', {symbol: "ETHBTC", symbols: ["BTCUSDT","BNBBTC"], windowSize: '1m'})	// illegal
-
-
-
-// run_query('/api/v3/historicalTrades', {symbol: "ETHBTC"})	// illegal
-
 

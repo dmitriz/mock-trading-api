@@ -11,6 +11,17 @@ const raw_req = (...args) => pipeline(...args)(
 	map(res => res.data)
 )
 
-module.exports = ({url, query}) => query
-	? raw_req(url + '?' + obj2qs(query))
-	: raw_req(url)
+const to_url = query => ('object' == typeof query) && (Object.keys(query).length > 0)
+	? '?' + obj2qs(query) 
+	: ''
+
+module.exports = ({url, query, headers, method}) => 
+	raw_req({
+		url: url + to_url(query), 
+		headers, 
+		method
+	})
+
+// module.exports = ({url, query, headers, method}) => query
+// 	? raw_req(url + '?' + obj2qs(query), {headers})
+// 	: raw_req(url, {headers})
