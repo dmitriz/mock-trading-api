@@ -42,11 +42,14 @@ const endpts_map = {
 
 	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#old-trade-lookup-market_data
 ,	'/api/v3/historicalTrades' : require('./endpoint-hist-trades')
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#test-new-order-trade
+,	'/api/v3/order/test' : require('./endpoint-order').test
 }
 
-const mock_client = ({ url, query, ...rest }) => {
+const mock_client = ({ url, ...rest }) => {
 	const endpt = rm_begin(BINANCE_REST_URLs)(url)
-	return of(endpts_map[endpt]({query, ...rest}))
+	return of(endpts_map[endpt]({...rest}))
 }
 
 module.exports = mock_client

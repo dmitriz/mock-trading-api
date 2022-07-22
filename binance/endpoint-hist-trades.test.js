@@ -44,3 +44,12 @@ test('historicalTrades throws without headers', t=>{
 		})(console.log)
 	)
 })
+test('historicalTrades throws with wrong headers', t=>{
+	t.throws(
+		() => mock_client({
+			url: 'https://api.binance.com/api/v3/historicalTrades', 
+			query: {symbol: 'ETHBNB'},
+			headers: {'APIKEY': 'BINANCE_API_KEY'}
+		})(console.log)
+	)
+})

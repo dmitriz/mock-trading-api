@@ -2,7 +2,11 @@ const req = require('../req')
 
 const { pipeline, map } = require('cpsfy')
 const { BINANCE_REST_URLs } = require('./conf')
-const show = console.log
+
+// const show = x => console.log(
+// 	require('util').inspect(x, {depth: null, colors: true})
+// )
+const show = x => console.dir(x, { depth: null })
 
 // use the 1st base url
 const run = ep => req({ url: BINANCE_REST_URLs[0] + ep })(show, show)
@@ -21,8 +25,8 @@ const run_mult = ep => BINANCE_REST_URLs.map(url =>
 // run('/api/v3/time')
 
 // run('/api/v3/exchangeInfo')
-// run_query('/api/v3/exchangeInfo')
-// run('/api/v3/exchangeInfo?symbol=ETHBTC')
+run_query('/api/v3/exchangeInfo')
+// run('/api/v3/exchangeInfo?symbol=BTCUSDT')
 // run('/api/v3/exchangeInfo?symbols=["BTCUSDT","BNBBTC"]')
 // run_query('/api/v3/exchangeInfo', {symbol: "ethbtc"})	// illegal
 // run_query('/api/v3/exchangeInfo', {symbol: "ETHBTC"})
@@ -51,7 +55,7 @@ const run_mult = ep => BINANCE_REST_URLs.map(url =>
 // run_query('/api/v3/klines', {symbol: "ETHBTC", interval: '1m', startTime: 1658334200000, endTime: 1658334360000, limit: 2})
 
 // run_query('/api/v3/avgPrice')	// illegal
-// run_query('/api/v3/avgPrice', {symbol: "ETHBTC"})
+// run_query('/api/v3/avgPrice', {symbol: "BTCUSDT"})
 
 // run_query('/api/v3/ticker/24hr')
 // run_query('/api/v3/ticker/24hr', {symbol: "ETHBTC"})

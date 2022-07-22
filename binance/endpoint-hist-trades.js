@@ -10,7 +10,7 @@ const hist_trades_example = [
   }
 ]
 module.exports = ({query: { symbol, limit, fromId }, headers}) => {
-	if (!headers) throw "API-key format invalid."
+	if (!headers['X-MBX-APIKEY']) throw "API-key format invalid."
 	if (!symbol) throw "Mandatory parameter 'symbol' was not sent, was empty/null, or malformed."
 	return hist_trades_example
 }

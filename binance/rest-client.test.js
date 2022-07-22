@@ -14,4 +14,3 @@ test('server time', t=>{
 	mock_client({url: 'https://api.binance.com/api/v3/time'})
 	(t.cDeepEqual({"serverTime": 1499827319559}))
 })
-
