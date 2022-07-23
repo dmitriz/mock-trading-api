@@ -11,8 +11,18 @@ module.exports = {
     price,
     stopPrice,
     trailingDelta,
-    icebergQty
+    icebergQty,
+    newClientOrderId,
+    newOrderRespType,
+    origClientOrderId,
+    orderId,
+    recvWindow
   }}) => {
+    if (!method || method == 'GET') {
+      if (!symbol) throw "Mandatory parameter 'symbol' was not sent, was empty/null, or malformed."
+      if (!origClientOrderId && !orderId) throw "Param 'origClientOrderId' or 'orderId' must be sent, but both were empty/null!"
+    }
+    if (recvWindow && recvWindow > 60000) throw "'recvWindow' must be less than 60000."
     if (!headers['X-MBX-APIKEY']) throw "API-key format invalid."
     if (!timestamp || !signature) throw "Need timestamp and signature."
     if (!symbol) throw "Mandatory parameter 'symbol' was not sent, was empty/null, or malformed."

@@ -45,6 +45,9 @@ const endpts_map = {
 
 	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#test-new-order-trade
 ,	'/api/v3/order/test' : require('./endpoint-order').test
+
+	// https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md#new-order--trade
+,	'/api/v3/order' : require('./endpoint-order').test
 }
 
 const mock_client = ({ url, ...rest }) => {
