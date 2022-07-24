@@ -1,4 +1,5 @@
-module.exports = { 
+module.exports = {
+	BINANCE_WS_URL: 'wss://stream.binance.com:9443',
 	BINANCE_REST_URLs: [
 		'https://api.binance.com',
 		'https://api1.binance.com',

@@ -14,7 +14,8 @@ const sign = (key, value) => crypto
 	.digest('hex')
 
 const binance_sign = ({query, ...rest}) => {
-	const timestamp = Date.now() - 1000
+	// const timestamp = Date.now() - 1000
+	const timestamp = Date.now()
 	const queryExt = {...query, timestamp}
 	const signature = sign(BINANCE_API_SECRET, queryExt)
 	return {query: {...queryExt, signature}, ...rest}

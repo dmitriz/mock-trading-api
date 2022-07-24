@@ -68,7 +68,7 @@ const run_signed = (endpt, query, method) =>
 // run_signed('/api/v3/order', {symbol: 'BNBBUSD', origClientOrderId: 1}, 'DELETE')
 // run_signed('/api/v3/order', {symbol: 'BNBBUSD', orderId: 1332988764}, 'DELETE')
 
-run_signed('/api/v3/order/cancelReplace', { symbol: "BNBBUSD", side: "BUY", type: "LIMIT", timeInForce: "GTC", price: 110, quantity: 1, cancelReplaceMode: 'STOP_ON_FAILURE', cancelOrigClientOrderId: 1}, 'POST')
+// run_signed('/api/v3/order/cancelReplace', { symbol: "BNBBUSD", side: "BUY", type: "LIMIT", timeInForce: "GTC", price: 110, quantity: 1, cancelReplaceMode: 'STOP_ON_FAILURE', cancelOrigClientOrderId: 1}, 'POST')
 // run_signed('/api/v3/order/cancelReplace', { symbol: "BNBBUSD", side: "BUY", type: "LIMIT", timeInForce: "GTC", price: 110, quantity: 1, cancelReplaceMode: 'STOP_ON_FAILURE', cancelOrderId: 1333012770})
 
 // run_signed('/api/v3/order', { symbol: 'BNBBUSD' })	// illegal
