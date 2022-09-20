@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "axios": "0.27.2",
-    "tape": "5.5.3",
+    "tape": "5.6.1",
     "test-curried": "1.0.1",
     "ws": "8.8.1"
   }
