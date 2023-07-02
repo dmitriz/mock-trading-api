@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/dmitriz/mock-trading-api#readme",
   "dependencies": {
-    "cpsfy": "^3.3.0",
+    "cpsfy": "^6.0.0",
     "ramda": "^0.29.0"
   },
   "devDependencies": {
