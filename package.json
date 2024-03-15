@@ -24,7 +24,7 @@
     "ramda": "^0.29.0"
   },
   "devDependencies": {
-    "axios": "1.4.0",
+    "axios": "1.6.8",
     "tape": "5.6.4",
     "test-curried": "1.0.1",
     "ws": "8.13.0"
