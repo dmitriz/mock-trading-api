@@ -21,7 +21,7 @@
   "homepage": "https://github.com/dmitriz/mock-trading-api#readme",
   "dependencies": {
     "cpsfy": "^6.0.0",
-    "ramda": "^0.29.0"
+    "ramda": "^0.32.0"
   },
   "devDependencies": {
     "axios": "1.4.0",
